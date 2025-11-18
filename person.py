@@ -16,6 +16,8 @@ class Person:
 # Objekte erstellen
 person1 = Person("Max", 25)
 person2 = Person("Anna", 30)
+person3 = Person("Obdocher", 15)
 
 print(person1.vorstellen())
 print(person2.vorstellen())
+print(person3.vorstellen())
