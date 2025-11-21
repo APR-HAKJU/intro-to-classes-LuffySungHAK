@@ -21,6 +21,6 @@ class Notebook:
         self.marke = marke
         self.modell = modell
         self.resolution = resolution
-        print(f"Neues Notebook mit Marke: " + marke + "wurde erstellt.")
+        print(f"Neues Notebook mit Marke: " + marke + " wurde erstellt.")
 
 nb_1 = Notebook(8, "Apple", "Macbook Pro", 14.2)
