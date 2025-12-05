@@ -36,14 +36,42 @@ Beide Songs haben denselben Datentyp: True
 
 # TODO: Importiere die Klasse Song aus 05_song
 # from 05_song import Song
-
-
+from song import Song
+song_1 = Song(titel="Africa", interpreten=["Toto"], link="https://youtu.be/FTQbiNvZqaY?si=QGu02963wNM79w7r")
+song_1.zeige_info()
 # TODO: Erstelle verschiedene Variablen mit unterschiedlichen Datentypen
 # text = "Hallo"
 # zahl = 42
 # liste = [1, 2, 3]
+text = "Hallo"
+zahl = 42
+liste = [1, 2, 3]
 
+print(type(text))
+print(type(zahl))
+print(type(liste))
+print(type(song_1))
 
+class laptop:
+    pass
+
+laptop_1 = laptop()
+laptop_2 = laptop()
+
+print(type(laptop_1))
+print(type(laptop_2))
+
+song_2 = Song("Billie Jean", ["Michael Jackson"], "https://youtu.be/Zi_XLOBDo_Y?si=y8y_vD7DT_wIM2sj")
+
+print(type(song_2))
+
+liste_songs = [song_1, song_2]
+
+print(liste_songs[0].titel)
+print(liste_songs[0].zeige_info)
+print(liste_songs[0].interpreten)
+print(liste_songs[1].titel)
+print(liste_songs[1].add_interpreten("Dj Lenzi"))
 # TODO: Erstelle 3 Song-Objekte mit Titeln und Interpreten deiner Wahl
 
 
