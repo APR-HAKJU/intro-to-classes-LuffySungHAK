@@ -17,10 +17,11 @@ Wichtig: Verwende das 'random' Modul für die Zufallszahlen!
 
 # TODO 0: Importiere das random Modul
 # import random
-
+import random
 
 # TODO 1: Erstelle die Klasse Wuerfel
-class Wuerfel:
+
+        
     """
     Ein Würfel mit einer bestimmten Anzahl an Seiten.
     
@@ -32,7 +33,10 @@ class Wuerfel:
     # TODO 1.1: Schreibe den Konstruktor __init__
     # Parameter: self, seiten, name
     # Speichere seiten und name als Attribute
-    pass
+    class Wuerfel:
+     def __init__(self, seiten, name):
+        self.seiten = seiten
+        self.name = name
     
     # TODO 1.2: Schreibe die Methode werfen()
     # Keine Parameter außer self

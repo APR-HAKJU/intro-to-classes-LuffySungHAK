@@ -42,9 +42,9 @@ class Kaffeemaschine:
             print(f"❌ Nicht genug Wasser! Bitte nachfüllen.")
     def zeige_status(self):
         print(f"Wasserstand: {self.Wasserstand} ml")
-    def wasser_nach_fullen(self):
-        self.Wasserstand += 500
-        print(f"💧 500 ml Wasser nachgefüllt")
+    def wasser_nach_fullen(self, menge):
+        self.Wasserstand += menge
+        print(f"💧 {menge} ml Wasser nachgefüllt")
 
 
 
@@ -63,7 +63,7 @@ Kaffeemaschine_1.kaffee_machen(200)
 Kaffeemaschine_1.kaffee_machen(200)
 
 # TODO: Fülle 500ml Wasser nach
-Kaffeemaschine_1.wasser_nach_fullen()
+Kaffeemaschine_1.wasser_nach_fullen(400)
 
 # TODO: Mache nochmal Kaffee mit 200ml
 Kaffeemaschine_1.kaffee_machen(200)

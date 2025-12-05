@@ -15,6 +15,13 @@ Der Einkaufswagen soll:
 
 # TODO 1: Erstelle die Klasse Artikel mit passendem Konstruktor
 class Artikel:
+    def __init__(self, Preis, Name):
+        self.Preis = Preis
+        self.Name = Name
+    def Zeige_info(self):
+        print(f"Name: {self.Name}")
+        print(f"Preis: {self.Preis}")
+        
     """
     Ein einzelner Artikel im Einkaufswagen.
     
@@ -34,6 +41,22 @@ class Artikel:
 
 # TODO 2: Erstelle die Klasse Einkaufswagen
 class Einkaufswagen:
+    def __init__(self):
+        self.Artikel = []
+    def add(self, Artikel):
+        self.Artikel.append(Artikel)
+        print(f"{Artikel} hinzugefügt")
+    def Gesamtpreis(self):
+        summe = 0
+        for x in self.Artikel:
+            summe += x.preis
+        return summe
+    def Anzahl_artikel(self):
+        print(len(self.Artikel))
+
+    def Zeige_inhalt(self):
+        for x in self.Artikel:
+            x.Zeige_info()
     """
     Ein Einkaufswagen der Artikel-Objekte verwaltet.
     
@@ -77,19 +100,30 @@ class Einkaufswagen:
 # artikel3 = Artikel("Käse", 4.50)
 pass
 
+artikel1 = Artikel(2.99, "Brot")
+artikel2 = Artikel(1.49, "Milch")
+artikel3 = Artikel(4.50, "Käse")
+
 # TODO 3.2: Erstelle einen Einkaufswagen
 # wagen = Einkaufswagen()
-pass
+
+
+wagen = Einkaufswagen()
+
 
 # TODO 3.3: Füge die drei Artikel zum Wagen hinzu
 # wagen.hinzufuegen(artikel1)
 # wagen.hinzufuegen(artikel2)
 # wagen.hinzufuegen(artikel3)
-pass
+
+wagen.add(artikel1)
+wagen.add(artikel2)
+wagen.add(artikel3)
 
 # TODO 3.4: Zeige den Inhalt des Wagens
 # wagen.zeige_inhalt()
-pass
+
+wagen.Zeige_inhalt()
 
 
 """

@@ -33,23 +33,51 @@ Beispiel Ergebnis:
    Interpreten: DJ Max, Sarah Sound, Beat Producer
 ▶️ Song 'Summer Vibes' wird gespielt...
 """
-
+import webbrowser
+import webbrowser
 # TODO: Erstelle hier die Klasse Song
-
+class Song:
+    def __init__(self, titel, interpreten, link):
+        self.titel = str(titel)
+        self.interpreten = interpreten
+        self.link = link
+        print(f"Neuer Song mit Titel {self.titel} & Interpreten {self.interpreten} wurden hinzufügt")
+    def zeige_info(self):
+        print(f"Titel: {self.titel}")
+        print(f"Interpreten: {self.interpreten}")
+    def add_interpreten(self, neuer_interpreten):
+        self.interpreten.append(neuer_interpreten)
+        print(f"{neuer_interpreten} wurde hinzufügt")
+        print(f"Alle Interpreten: {self.interpreten}")
+    def anzahl_interpreten(self):
+        return len(self.interpreten)
+    def play(self):
+        webbrowser.open(self.link)
+    
+        
 
 # TODO: Erstelle einen Song mit einem Titel und 2 Interpreten deiner Wahl
-
+song_1 = Song(titel="Die with smile", interpreten=["Bruno Mars"], link="https://youtu.be/kPa7bsKwL-c?si=17oYoUxR7EamCudM")
+song_2 = Song(titel="Itsumo nando demo", interpreten=["Youmi Kimura"], link="https://youtu.be/dyzD_0Bgg9E?si=rlXA43o_23pWN5Di")
+song_3 = Song(titel="The lazy song", interpreten=["Bruno Mars"], link="https://youtu.be/fLexgOxsZu0?si=qxfXlzkCymkQFLPp")
 
 # TODO: Zeige die Song-Info
-
+song_2.zeige_info()
 
 # TODO: Füge einen weiteren Interpreten hinzu
+
+song_1.add_interpreten("Lady Gaga")
 
 
 # TODO: Zeige die Anzahl der Interpreten
 
+nr_artists = song_1.anzahl_interpreten()
+print(nr_artists)
 
 # TODO: Zeige die Song-Info erneut
 
+song_1.zeige_info()
 
 # TODO: Spiele den Song ab
+
+song_2.play()

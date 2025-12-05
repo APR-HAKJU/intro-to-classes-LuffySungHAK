@@ -41,9 +41,11 @@ class Auto:
 auto1 = Auto("VW", "Golf", 400)
 
 # TODO: Zeige die Info
+
 auto1.zeige_info()
 
 # TODO: Lass das Auto dreimal fahren
+
 auto1.Fahren()
 auto1.Fahren()
 auto1.Fahren()
